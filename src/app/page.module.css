@@ -1,3 +1,100 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  background-color: #f5f5f5;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  background-color: #fff;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo img {
+  margin-bottom: 20px;
+}
+
+.logo h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.logo p {
+  font-size: 18px;
+  color: #666;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.info p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #f00;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.button p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.button:hover {
+  background-color: #d00;
+}
+
+
+
+
+/* 
+
+
 .main {
   display: flex;
   flex-direction: column;
@@ -108,7 +205,7 @@
 .logo {
   position: relative;
 }
-/* Enable hover only on non-touch devices */
+/* Enable hover only on non-touch devices *
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
     background: rgba(var(--card-rgb), 0.1);
@@ -126,7 +223,7 @@
   }
 }
 
-/* Mobile */
+/* Mobile *
 @media (max-width: 700px) {
   .content {
     padding: 4rem;
@@ -203,7 +300,7 @@
   }
 }
 
-/* Tablet and Smaller Desktop */
+/* Tablet and Smaller Desktop *
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
     grid-template-columns: repeat(2, 50%);
@@ -227,4 +324,4 @@
   to {
     transform: rotate(0deg);
   }
-}
+} */
