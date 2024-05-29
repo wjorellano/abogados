@@ -1,6 +1,8 @@
-'use client'
+"use client";
+
 import React from "react";
 import emailjs from "emailjs-com";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Empresario = () => {
   const [formData, setFormData] = React.useState({
@@ -39,17 +41,29 @@ const Empresario = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
+      const serviceID = "service_gz9iidr"; // Reemplaza con tu Service ID de EmailJS
+      const templateID = "template_u8o3quj"; // Reemplaza con tu Template ID de EmailJS
+      const userID = "l_R0nu_kAXuE0IYdS"; // Reemplaza con tu User ID de EmailJS
+
+      // Agrega el campo tipoFormulario al objeto formData
+      formData.tipoFormulario = "empresario";
+
       emailjs
-        .send(
-          "tu_service_id", // Reemplaza con tu Service ID de EmailJS
-          "tu_template_id", // Reemplaza con tu Template ID de EmailJS
-          formData,
-          "tu_user_id" // Reemplaza con tu User ID de EmailJS
-        )
+        .send(serviceID, templateID, formData, userID)
         .then(
           (result) => {
             console.log(result.text);
             setMessage("Correo enviado exitosamente!");
+            setFormData({
+              nombre: "",
+              telefono: "",
+              correo: "",
+              empresa: "",
+              cargo: "",
+              ciudad: "",
+              trabajadores: "",
+              servicios: "",
+            });
           },
           (error) => {
             console.log(error.text);
@@ -179,7 +193,7 @@ const Empresario = () => {
         </div>
 
         <button type="submit" className="btn btn-primary">Enviar</button>
-        {message && <p>{message}</p>}
+        {message && <p className="mt-3">{message}</p>}
       </form>
     </div>
   );
