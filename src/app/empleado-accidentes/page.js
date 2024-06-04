@@ -33,19 +33,31 @@ const EmpleadoAccidente = () => {
     let tempErrors = {};
     tempErrors.nombre = formData.nombre ? "" : "Este campo es requerido.";
     tempErrors.telefono =
-      formData.telefono.length === 10 ? "" : "El teléfono debe tener 10 números.";
-    tempErrors.correo = /\S+@\S+\.\S+/.test(formData.correo) ? "" : "Correo inválido.";
+      formData.telefono.length === 10
+        ? ""
+        : "El teléfono debe tener 10 números.";
+    tempErrors.correo = /\S+@\S+\.\S+/.test(formData.correo)
+      ? ""
+      : "Correo inválido.";
     tempErrors.familiar = formData.familiar ? "" : "Este campo es requerido.";
     tempErrors.empresa = formData.empresa ? "" : "Este campo es requerido.";
     tempErrors.tipoCaso = formData.tipoCaso ? "" : "Este campo es requerido.";
-    tempErrors.causoMuerte = formData.causoMuerte ? "" : "Este campo es requerido.";
-    tempErrors.sigueTrabajando = formData.sigueTrabajando ? "" : "Este campo es requerido.";
+    tempErrors.causoMuerte = formData.causoMuerte
+      ? ""
+      : "Este campo es requerido.";
+    tempErrors.sigueTrabajando = formData.sigueTrabajando
+      ? ""
+      : "Este campo es requerido.";
     tempErrors.ciudad = formData.ciudad ? "" : "Este campo es requerido.";
     tempErrors.cargo = formData.cargo ? "" : "Este campo es requerido.";
     tempErrors.salario = formData.salario ? "" : "Este campo es requerido.";
     tempErrors.contrato = formData.contrato ? "" : "Este campo es requerido.";
-    tempErrors.trabajadores = formData.trabajadores ? "" : "Este campo es requerido.";
-    tempErrors.contratista = formData.contratista ? "" : "Este campo es requerido.";
+    tempErrors.trabajadores = formData.trabajadores
+      ? ""
+      : "Este campo es requerido.";
+    tempErrors.contratista = formData.contratista
+      ? ""
+      : "Este campo es requerido.";
     setErrors(tempErrors);
     return Object.values(tempErrors).every((x) => x === "");
   };
@@ -53,42 +65,40 @@ const EmpleadoAccidente = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-        const serviceID = "service_gz9iidr"; // Reemplaza con tu Service ID de EmailJS
-        const templateID = "template_u8o3quj"; // Reemplaza con tu Template ID de EmailJS
-        const userID = "l_R0nu_kAXuE0IYdS"; // Reemplaza con tu User ID de EmailJS
+      const serviceID = "service_gz9iidr"; // Reemplaza con tu Service ID de EmailJS
+      const templateID = "template_u8o3quj"; // Reemplaza con tu Template ID de EmailJS
+      const userID = "l_R0nu_kAXuE0IYdS"; // Reemplaza con tu User ID de EmailJS
 
-        // Agrega el campo tipoFormulario al objeto formData
-        formData.tipoFormulario = "empleadoAccidente";
-  
-        emailjs
-            .send(serviceID, templateID, formData, userID)
-            .then(
-                (result) => {
-                    console.log(result.text);
-                    setMessage("Correo enviado exitosamente!");
-                    setFormData({
-                        nombre: "",
-                        telefono: "",
-                        correo: "",
-                        empresa: "",
-                        siguesTrabajando: "",
-                        ciudadLaboraste: "",
-                        cargo: "",
-                        ultimoSalario: "",
-                        tipoContrato: "",
-                        cantidadTrabajadores: "",
-                        esContratista: "",
-                        tipoAccidente: "",
-                        causaMuerte: "",
-                        documentosPruebas: "",
-                        pagosPendientes: "",
-                    });
-                },
-                (error) => {
-                    console.log(error.text);
-                    setMessage("Hubo un error al enviar el correo. Intenta de nuevo.");
-                }
-            );
+      // Agrega el campo tipoFormulario al objeto formData
+      formData.tipoFormulario = "empleadoAccidente";
+
+      emailjs.send(serviceID, templateID, formData, userID).then(
+        (result) => {
+          console.log(result.text);
+          setMessage("Correo enviado exitosamente!");
+          setFormData({
+            nombre: "",
+            telefono: "",
+            correo: "",
+            empresa: "",
+            siguesTrabajando: "",
+            ciudadLaboraste: "",
+            cargo: "",
+            ultimoSalario: "",
+            tipoContrato: "",
+            cantidadTrabajadores: "",
+            esContratista: "",
+            tipoAccidente: "",
+            causaMuerte: "",
+            documentosPruebas: "",
+            pagosPendientes: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          setMessage("Hubo un error al enviar el correo. Intenta de nuevo.");
+        }
+      );
     } else {
       setMessage("Por favor completa todos los campos requeridos.");
     }
@@ -114,7 +124,7 @@ const EmpleadoAccidente = () => {
           />
           {errors.nombre && <p className="text-danger">{errors.nombre}</p>}
         </div>
-        
+
         <div className="form-group">
           <label>Tu teléfono</label>
           <input
@@ -156,7 +166,9 @@ const EmpleadoAccidente = () => {
         </div>
 
         <div className="form-group">
-          <label>Nombre de la empresa o negocio a quien quieres demandar tus derechos</label>
+          <label>
+            Nombre de la empresa o negocio a quien quieres demandar tus derechos
+          </label>
           <input
             type="text"
             className="form-control"
@@ -168,7 +180,9 @@ const EmpleadoAccidente = () => {
         </div>
 
         <div className="form-group">
-          <label>Tuviste un accidente de trabajo o una enfermedad laboral</label>
+          <label>
+            Tuviste un accidente de trabajo o una enfermedad laboral
+          </label>
           <select
             className="form-control"
             name="tipoCaso"
@@ -194,7 +208,9 @@ const EmpleadoAccidente = () => {
             <option value="si">Si</option>
             <option value="no">No</option>
           </select>
-          {errors.causoMuerte && <p className="text-danger">{errors.causoMuerte}</p>}
+          {errors.causoMuerte && (
+            <p className="text-danger">{errors.causoMuerte}</p>
+          )}
         </div>
 
         <div className="form-group">
@@ -209,7 +225,9 @@ const EmpleadoAccidente = () => {
             <option value="si">Si</option>
             <option value="no">No</option>
           </select>
-          {errors.sigueTrabajando && <p className="text-danger">{errors.sigueTrabajando}</p>}
+          {errors.sigueTrabajando && (
+            <p className="text-danger">{errors.sigueTrabajando}</p>
+          )}
         </div>
 
         <div className="form-group">
@@ -262,11 +280,21 @@ const EmpleadoAccidente = () => {
             onChange={handleChange}
           >
             <option value="">Seleccione una opción</option>
-            <option value="contrato de trabajo indefinido">Contrato de trabajo indefinido</option>
-            <option value="contrato de trabajo a termino fijo">Contrato de trabajo a término fijo</option>
-            <option value="contrato de trabajo por obra/labor">Contrato de trabajo por obra/labor</option>
-            <option value="contrato por prestacion de servicios">Contrato por prestación de servicios</option>
-            <option value="no tenia contrato firmado, fue verbal">No tenía contrato firmado, fue verbal</option>
+            <option value="contrato de trabajo indefinido">
+              Contrato de trabajo indefinido
+            </option>
+            <option value="contrato de trabajo a termino fijo">
+              Contrato de trabajo a término fijo
+            </option>
+            <option value="contrato de trabajo por obra/labor">
+              Contrato de trabajo por obra/labor
+            </option>
+            <option value="contrato por prestacion de servicios">
+              Contrato por prestación de servicios
+            </option>
+            <option value="no tenia contrato firmado, fue verbal">
+              No tenía contrato firmado, fue verbal
+            </option>
           </select>
           {errors.contrato && <p className="text-danger">{errors.contrato}</p>}
         </div>
@@ -285,7 +313,9 @@ const EmpleadoAccidente = () => {
             <option value="entre 30 y 100">Entre 30 y 100</option>
             <option value="mas de 100">Más de 100</option>
           </select>
-          {errors.trabajadores && <p className="text-danger">{errors.trabajadores}</p>}
+          {errors.trabajadores && (
+            <p className="text-danger">{errors.trabajadores}</p>
+          )}
         </div>
 
         <div className="form-group">
@@ -300,12 +330,16 @@ const EmpleadoAccidente = () => {
             <option value="si">Si</option>
             <option value="no">No</option>
           </select>
-          {errors.contratista && <p className="text-danger">{errors.contratista}</p>}
+          {errors.contratista && (
+            <p className="text-danger">{errors.contratista}</p>
+          )}
         </div>
 
         <input type="hidden" name="tipoFormulario" value="empleadoAccidente" />
-        <button type="submit" className="btn btn-primary">Enviar</button>
-        {message && <p className="text-info mt-3">{message}</p>}
+        {message && <p className="mt-3 alert alert-info">{message}</p>}
+        <button type="submit" className="btn btn-primary mb-5 w-100">
+          Enviar
+        </button>
       </form>
     </div>
   );

@@ -1,7 +1,7 @@
 "use client"; // Agrega esta línea para indicar que este es un componente del lado del cliente
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const EmpleadoLaboral = () => {
   const [formData, setFormData] = useState({
@@ -34,20 +34,30 @@ const EmpleadoLaboral = () => {
     let tempErrors = {};
     tempErrors.nombre = formData.nombre ? "" : "Este campo es requerido.";
     tempErrors.telefono =
-      formData.telefono.length === 10 ? "" : "El teléfono debe tener 10 números.";
-    tempErrors.correo = /\S+@\S+\.\S+/.test(formData.correo) ? "" : "Correo inválido.";
+      formData.telefono.length === 10
+        ? ""
+        : "El teléfono debe tener 10 números.";
+    tempErrors.correo = /\S+@\S+\.\S+/.test(formData.correo)
+      ? ""
+      : "Correo inválido.";
     tempErrors.empresa = formData.empresa ? "" : "Este campo es requerido.";
-    tempErrors.trabajando = formData.trabajando ? "" : "Este campo es requerido.";
+    tempErrors.trabajando = formData.trabajando
+      ? ""
+      : "Este campo es requerido.";
     tempErrors.ciudad = formData.ciudad ? "" : "Este campo es requerido.";
     tempErrors.cargo = formData.cargo ? "" : "Este campo es requerido.";
     tempErrors.salario = formData.salario ? "" : "Este campo es requerido.";
     tempErrors.contrato = formData.contrato ? "" : "Este campo es requerido.";
     tempErrors.ingreso = formData.ingreso ? "" : "Este campo es requerido.";
-    tempErrors.trabajadores = formData.trabajadores ? "" : "Este campo es requerido.";
+    tempErrors.trabajadores = formData.trabajadores
+      ? ""
+      : "Este campo es requerido.";
     tempErrors.primas = formData.primas ? "" : "Este campo es requerido.";
     tempErrors.deuda = formData.deuda ? "" : "Este campo es requerido.";
     tempErrors.pruebas = formData.pruebas ? "" : "Este campo es requerido.";
-    tempErrors.contratista = formData.contratista ? "" : "Este campo es requerido.";
+    tempErrors.contratista = formData.contratista
+      ? ""
+      : "Este campo es requerido.";
     setErrors(tempErrors);
     return Object.values(tempErrors).every((x) => x === "");
   };
@@ -62,31 +72,29 @@ const EmpleadoLaboral = () => {
       // Agrega el campo tipoFormulario al objeto formData
       formData.tipoFormulario = "empleado";
 
-      emailjs
-        .send(serviceID, templateID, formData, userID)    
-        .then(
-          (result) => {
-            console.log(result.text);
-            setMessage("Correo enviado exitosamente!");
-            setFormData({
-              nombre: "",
-              telefono: "",
-              correo: "",
-              empresa: "",
-              siguesTrabajando: "",
-              ciudadLaboraste: "",
-              cargo: "",
-              ultimoSalario: "",
-              tipoContrato: "",
-              cantidadTrabajadores: "",
-              esContratista: "",
-            });            
-          },
-          (error) => {
-            console.log(error.text);
-            setMessage("Hubo un error al enviar el correo. Intenta de nuevo.");
-          }
-        );
+      emailjs.send(serviceID, templateID, formData, userID).then(
+        (result) => {
+          console.log(result.text);
+          setMessage("Correo enviado exitosamente!");
+          setFormData({
+            nombre: "",
+            telefono: "",
+            correo: "",
+            empresa: "",
+            siguesTrabajando: "",
+            ciudadLaboraste: "",
+            cargo: "",
+            ultimoSalario: "",
+            tipoContrato: "",
+            cantidadTrabajadores: "",
+            esContratista: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          setMessage("Hubo un error al enviar el correo. Intenta de nuevo.");
+        }
+      );
     } else {
       setMessage("Por favor completa todos los campos requeridos.");
     }
@@ -112,7 +120,7 @@ const EmpleadoLaboral = () => {
           />
           {errors.nombre && <div className="text-danger">{errors.nombre}</div>}
         </div>
-        
+
         <div className="mb-3">
           <label className="form-label">Tu teléfono</label>
           <input
@@ -123,7 +131,9 @@ const EmpleadoLaboral = () => {
             onChange={handleChange}
             required
           />
-          {errors.telefono && <div className="text-danger">{errors.telefono}</div>}
+          {errors.telefono && (
+            <div className="text-danger">{errors.telefono}</div>
+          )}
         </div>
 
         <div className="mb-3">
@@ -140,7 +150,9 @@ const EmpleadoLaboral = () => {
         </div>
 
         <div className="mb-3">
-          <label className="form-label">Nombre de la empresa o negocio a quien quieres demandar tus derechos</label>
+          <label className="form-label">
+            Nombre de la empresa o negocio a quien quieres demandar tus derechos
+          </label>
           <input
             type="text"
             className="form-control"
@@ -149,11 +161,15 @@ const EmpleadoLaboral = () => {
             onChange={handleChange}
             required
           />
-          {errors.empresa && <div className="text-danger">{errors.empresa}</div>}
+          {errors.empresa && (
+            <div className="text-danger">{errors.empresa}</div>
+          )}
         </div>
 
         <div className="mb-3">
-          <label className="form-label">¿Sigues trabajando en la empresa?</label>
+          <label className="form-label">
+            ¿Sigues trabajando en la empresa?
+          </label>
           <div>
             <div className="form-check form-check-inline">
               <input
@@ -176,7 +192,9 @@ const EmpleadoLaboral = () => {
               <label className="form-check-label">No</label>
             </div>
           </div>
-          {errors.trabajando && <div className="text-danger">{errors.trabajando}</div>}
+          {errors.trabajando && (
+            <div className="text-danger">{errors.trabajando}</div>
+          )}
         </div>
 
         <div className="mb-3">
@@ -220,7 +238,9 @@ const EmpleadoLaboral = () => {
             <option value="Entre 4 y 10 millones">Entre 4 y 10 millones</option>
             <option value="Más de 10 millones">Más de 10 millones</option>
           </select>
-          {errors.salario && <div className="text-danger">{errors.salario}</div>}
+          {errors.salario && (
+            <div className="text-danger">{errors.salario}</div>
+          )}
         </div>
 
         <div className="mb-3">
@@ -233,13 +253,25 @@ const EmpleadoLaboral = () => {
             required
           >
             <option value="">Seleccione una opción</option>
-            <option value="Contrato de trabajo indefinido">Contrato de trabajo indefinido</option>
-            <option value="Contrato de trabajo a término fijo">Contrato de trabajo a término fijo</option>
-            <option value="Contrato de trabajo por obra/labor">Contrato de trabajo por obra/labor</option>
-            <option value="Contrato por prestación de servicios">Contrato por prestación de servicios</option>
-            <option value="No tenía contrato firmado, fue verbal">No tenía contrato firmado, fue verbal</option>
+            <option value="Contrato de trabajo indefinido">
+              Contrato de trabajo indefinido
+            </option>
+            <option value="Contrato de trabajo a término fijo">
+              Contrato de trabajo a término fijo
+            </option>
+            <option value="Contrato de trabajo por obra/labor">
+              Contrato de trabajo por obra/labor
+            </option>
+            <option value="Contrato por prestación de servicios">
+              Contrato por prestación de servicios
+            </option>
+            <option value="No tenía contrato firmado, fue verbal">
+              No tenía contrato firmado, fue verbal
+            </option>
           </select>
-          {errors.contrato && <div className="text-danger">{errors.contrato}</div>}
+          {errors.contrato && (
+            <div className="text-danger">{errors.contrato}</div>
+          )}
         </div>
 
         <div className="mb-3">
@@ -252,11 +284,15 @@ const EmpleadoLaboral = () => {
             onChange={handleChange}
             required
           />
-          {errors.ingreso && <div className="text-danger">{errors.ingreso}</div>}
+          {errors.ingreso && (
+            <div className="text-danger">{errors.ingreso}</div>
+          )}
         </div>
 
         <div className="mb-3">
-          <label className="form-label">Fecha de retiro de la empresa. Si sigues activo no diligenciar</label>
+          <label className="form-label">
+            Fecha de retiro de la empresa. Si sigues activo no diligenciar
+          </label>
           <input
             type="date"
             className="form-control"
@@ -268,7 +304,9 @@ const EmpleadoLaboral = () => {
         </div>
 
         <div className="mb-3">
-          <label className="form-label">¿Cuántos trabajadores tiene la empresa?</label>
+          <label className="form-label">
+            ¿Cuántos trabajadores tiene la empresa?
+          </label>
           <select
             className="form-select"
             name="trabajadores"
@@ -282,11 +320,15 @@ const EmpleadoLaboral = () => {
             <option value="Entre 30 y 100">Entre 30 y 100</option>
             <option value="Más de 100">Más de 100</option>
           </select>
-          {errors.trabajadores && <div className="text-danger">{errors.trabajadores}</div>}
+          {errors.trabajadores && (
+            <div className="text-danger">{errors.trabajadores}</div>
+          )}
         </div>
 
         <div className="mb-3">
-          <label className="form-label">¿Te pagaban primas, cesantías, vacaciones?</label>
+          <label className="form-label">
+            ¿Te pagaban primas, cesantías, vacaciones?
+          </label>
           <div>
             <div className="form-check form-check-inline">
               <input
@@ -327,13 +369,17 @@ const EmpleadoLaboral = () => {
             <option value="Vacaciones">Vacaciones</option>
             <option value="Liquidación">Liquidación</option>
             <option value="Horas extras">Horas extras</option>
-            <option value="Varias o todas las anteriores">Varias o todas las anteriores</option>
+            <option value="Varias o todas las anteriores">
+              Varias o todas las anteriores
+            </option>
           </select>
           {errors.deuda && <div className="text-danger">{errors.deuda}</div>}
         </div>
 
         <div className="mb-3">
-          <label className="form-label">¿Tienes alguno de los siguientes documentos como pruebas?</label>
+          <label className="form-label">
+            ¿Tienes alguno de los siguientes documentos como pruebas?
+          </label>
           <select
             className="form-select"
             name="pruebas"
@@ -348,11 +394,15 @@ const EmpleadoLaboral = () => {
             <option value="Volantes de pago">Volantes de pago</option>
             <option value="No tengo pruebas">No tengo pruebas</option>
           </select>
-          {errors.pruebas && <div className="text-danger">{errors.pruebas}</div>}
+          {errors.pruebas && (
+            <div className="text-danger">{errors.pruebas}</div>
+          )}
         </div>
 
         <div className="mb-3">
-          <label className="form-label">¿La empresa es contratista de una empresa más grande?</label>
+          <label className="form-label">
+            ¿La empresa es contratista de una empresa más grande?
+          </label>
           <div>
             <div className="form-check form-check-inline">
               <input
@@ -375,11 +425,15 @@ const EmpleadoLaboral = () => {
               <label className="form-check-label">No</label>
             </div>
           </div>
-          {errors.contratista && <div className="text-danger">{errors.contratista}</div>}
+          {errors.contratista && (
+            <div className="text-danger">{errors.contratista}</div>
+          )}
         </div>
-
-        <button type="submit" className="btn btn-primary">Enviar</button>
         {message && <div className="mt-3 alert alert-info">{message}</div>}
+
+        <button type="submit" className="btn btn-primary mb-5 w-100">
+          Enviar
+        </button>
       </form>
     </div>
   );

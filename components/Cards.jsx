@@ -1,11 +1,11 @@
-'use client'
+"use client";
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { Link } from "next/link";
 
 const EmpresarioCard = () => {
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "18rem", height: "100%" }}>
       <Card.Body>
         <Card.Title>Empresas</Card.Title>
         <Card.Text>
@@ -52,4 +52,3 @@ const TrabajadorCard = () => {
 };
 
 export { EmpresarioCard, TrabajadorCard };
-
