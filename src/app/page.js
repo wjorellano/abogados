@@ -5,15 +5,15 @@ import logo from "../app/logo.jpeg";
 
 export default function Home() {
   return (
-    <div className="container-fluid h-100">
+    <div className="container-fluid h-100 mb-4">
       <div className="row">
         <div className="col">
           <div className={styles.logo}>
             <Image
               src={logo}
               alt="Mendoza & Gutiérrez"
-              width="auto"
-              height="auto"
+              width="500"
+              height="500"
             />
             {/* <h2>Mendoza & Gutiérrez</h2>
             <p>Abogados</p> */}
