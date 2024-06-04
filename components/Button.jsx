@@ -5,7 +5,7 @@ import Link from "next/link";
 const Button = ({ title, subtitle, href }) => {
   return (
     <div className={styles.button}>
-      <Link href={href}>
+      <Link href={href} className="text-white text-decoration-none">
         <h2 className="text-white">{title}</h2>
         <p className="text-white">{subtitle}</p>
       </Link>
