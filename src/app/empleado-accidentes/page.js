@@ -59,7 +59,7 @@ const EmpleadoAccidente = () => {
     tempErrors.contratista = formData.contratista
       ? ""
       : "Este campo es requerido.";
-    if (formData.contratista === "Si") {
+    if (formData.contratista === "si") {
       tempErrors.empresaContratista = formData.empresaContratista
         ? ""
         : "Este campo es requerido.";
@@ -87,7 +87,7 @@ const EmpleadoAccidente = () => {
             telefono: "",
             correo: "",
             empresa: "",
-            siguesTrabajando: "",
+            sigueTrabajando: "",
             ciudadLaboraste: "",
             cargo: "",
             ultimoSalario: "",
@@ -342,7 +342,7 @@ const EmpleadoAccidente = () => {
           )}
         </div>
 
-        {formData.contratista === "Si" && (
+        {formData.contratista === "si" && (
           <div className="mb-3">
             <label className="form-label">
               Nombre de la empresa contratista
