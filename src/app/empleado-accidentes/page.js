@@ -120,7 +120,7 @@ const EmpleadoAccidente = () => {
       <p>Tiempo de respuesta 1 – 3 días hábiles</p>
 
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>Tu nombre completo</label>
           <input
             type="text"
@@ -132,7 +132,7 @@ const EmpleadoAccidente = () => {
           {errors.nombre && <p className="text-danger">{errors.nombre}</p>}
         </div>
 
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>Tu teléfono</label>
           <input
             type="text"
@@ -144,7 +144,7 @@ const EmpleadoAccidente = () => {
           {errors.telefono && <p className="text-danger">{errors.telefono}</p>}
         </div>
 
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>Tu correo electrónico</label>
           <input
             type="email"
@@ -156,7 +156,7 @@ const EmpleadoAccidente = () => {
           {errors.correo && <p className="text-danger">{errors.correo}</p>}
         </div>
 
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>Eres un familiar de la persona lesionada</label>
           <select
             className="form-control"
@@ -172,7 +172,7 @@ const EmpleadoAccidente = () => {
           {errors.familiar && <p className="text-danger">{errors.familiar}</p>}
         </div>
 
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>
             Nombre de la empresa o negocio a quien quieres demandar tus derechos
           </label>
@@ -186,7 +186,7 @@ const EmpleadoAccidente = () => {
           {errors.empresa && <p className="text-danger">{errors.empresa}</p>}
         </div>
 
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>
             Tuviste un accidente de trabajo o una enfermedad laboral
           </label>
@@ -203,7 +203,7 @@ const EmpleadoAccidente = () => {
           {errors.tipoCaso && <p className="text-danger">{errors.tipoCaso}</p>}
         </div>
 
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>El accidente/enfermedad causó la muerte del empleado</label>
           <select
             className="form-control"
@@ -220,7 +220,7 @@ const EmpleadoAccidente = () => {
           )}
         </div>
 
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>Sigues trabajando en la empresa</label>
           <select
             className="form-control"
@@ -237,7 +237,7 @@ const EmpleadoAccidente = () => {
           )}
         </div>
 
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>En qué ciudad laboraste</label>
           <input
             type="text"
@@ -249,7 +249,7 @@ const EmpleadoAccidente = () => {
           {errors.ciudad && <p className="text-danger">{errors.ciudad}</p>}
         </div>
 
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>Qué cargo tenías</label>
           <input
             type="text"
@@ -261,7 +261,7 @@ const EmpleadoAccidente = () => {
           {errors.cargo && <p className="text-danger">{errors.cargo}</p>}
         </div>
 
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>Cual fue o es tu último salario</label>
           <select
             className="form-control"
@@ -278,7 +278,7 @@ const EmpleadoAccidente = () => {
           {errors.salario && <p className="text-danger">{errors.salario}</p>}
         </div>
 
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>Qué tipo de contrato tienes o tenías</label>
           <select
             className="form-control"
@@ -306,7 +306,7 @@ const EmpleadoAccidente = () => {
           {errors.contrato && <p className="text-danger">{errors.contrato}</p>}
         </div>
 
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>Cuantos trabajadores tiene la empresa</label>
           <select
             className="form-control"
@@ -325,7 +325,7 @@ const EmpleadoAccidente = () => {
           )}
         </div>
 
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>La empresa es contratista de una empresa más grande</label>
           <select
             className="form-control"
@@ -349,7 +349,7 @@ const EmpleadoAccidente = () => {
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-control mb-2"
               name="empresaContratista"
               value={formData.empresaContratista}
               onChange={handleChange}
