@@ -20,6 +20,7 @@ const EmpleadoAccidente = () => {
     contrato: "",
     trabajadores: "",
     contratista: "",
+    empresaContratista: "",
   });
 
   const [errors, setErrors] = React.useState({});
@@ -58,6 +59,11 @@ const EmpleadoAccidente = () => {
     tempErrors.contratista = formData.contratista
       ? ""
       : "Este campo es requerido.";
+    if (formData.contratista === "Si") {
+      tempErrors.empresaContratista = formData.empresaContratista
+        ? ""
+        : "Este campo es requerido.";
+    }
     setErrors(tempErrors);
     return Object.values(tempErrors).every((x) => x === "");
   };
@@ -88,6 +94,7 @@ const EmpleadoAccidente = () => {
             tipoContrato: "",
             cantidadTrabajadores: "",
             esContratista: "",
+            empresaContratista: "",
             tipoAccidente: "",
             causaMuerte: "",
             documentosPruebas: "",
@@ -334,6 +341,25 @@ const EmpleadoAccidente = () => {
             <p className="text-danger">{errors.contratista}</p>
           )}
         </div>
+
+        {formData.contratista === "Si" && (
+          <div className="mb-3">
+            <label className="form-label">
+              Nombre de la empresa contratista
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              name="empresaContratista"
+              value={formData.empresaContratista}
+              onChange={handleChange}
+              required
+            />
+            {errors.empresaContratista && (
+              <div className="text-danger">{errors.empresaContratista}</div>
+            )}
+          </div>
+        )}
 
         <input type="hidden" name="tipoFormulario" value="empleadoAccidente" />
         {message && <p className="mt-3 alert alert-info">{message}</p>}

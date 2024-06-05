@@ -21,6 +21,7 @@ const EmpleadoLaboral = () => {
     deuda: "",
     pruebas: "",
     contratista: "",
+    empresaContratista: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -58,6 +59,11 @@ const EmpleadoLaboral = () => {
     tempErrors.contratista = formData.contratista
       ? ""
       : "Este campo es requerido.";
+    if (formData.contratista === "Si") {
+      tempErrors.empresaContratista = formData.empresaContratista
+        ? ""
+        : "Este campo es requerido.";
+    }
     setErrors(tempErrors);
     return Object.values(tempErrors).every((x) => x === "");
   };
@@ -88,6 +94,7 @@ const EmpleadoLaboral = () => {
             tipoContrato: "",
             cantidadTrabajadores: "",
             esContratista: "",
+            empresaContratista: "",
           });
         },
         (error) => {
@@ -253,8 +260,8 @@ const EmpleadoLaboral = () => {
             required
           >
             <option value="">Seleccione una opción</option>
-            <option value="Contrato de trabajo indefinido">
-              Contrato de trabajo indefinido
+            <option value="Contrato de trabajo a término indefinido">
+              Contrato de trabajo a término indefinido
             </option>
             <option value="Contrato de trabajo a término fijo">
               Contrato de trabajo a término fijo
@@ -429,6 +436,26 @@ const EmpleadoLaboral = () => {
             <div className="text-danger">{errors.contratista}</div>
           )}
         </div>
+
+        {formData.contratista === "Si" && (
+          <div className="mb-3">
+            <label className="form-label">
+              Nombre de la empresa contratista
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              name="empresaContratista"
+              value={formData.empresaContratista}
+              onChange={handleChange}
+              required
+            />
+            {errors.empresaContratista && (
+              <div className="text-danger">{errors.empresaContratista}</div>
+            )}
+          </div>
+        )}
+
         {message && <div className="mt-3 alert alert-info">{message}</div>}
 
         <button type="submit" className="btn btn-primary mb-5 w-100">
