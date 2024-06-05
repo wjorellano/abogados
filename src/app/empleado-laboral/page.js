@@ -4,7 +4,7 @@ import emailjs from "emailjs-com";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const EmpleadoLaboral = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = React.useState({
     nombre: "",
     telefono: "",
     correo: "",
@@ -28,7 +28,8 @@ const EmpleadoLaboral = () => {
   const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value, type, checked } = e.target;
+    setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
   };
 
   const validate = () => {
@@ -87,13 +88,18 @@ const EmpleadoLaboral = () => {
             telefono: "",
             correo: "",
             empresa: "",
-            siguesTrabajando: "",
-            ciudadLaboraste: "",
+            trabajando: "",
+            ciudad: "",
             cargo: "",
-            ultimoSalario: "",
-            tipoContrato: "",
-            cantidadTrabajadores: "",
-            esContratista: "",
+            salario: "",
+            contrato: "",
+            ingreso: "",
+            retiro: "",
+            trabajadores: "",
+            primas: "",
+            deuda: "",
+            pruebas: "",
+            contratista: "",
             empresaContratista: "",
           });
         },
@@ -184,6 +190,7 @@ const EmpleadoLaboral = () => {
                 type="radio"
                 name="trabajando"
                 value="Si"
+                checked={formData.trabajando === "Si"}
                 onChange={handleChange}
               />
               <label className="form-check-label">Si</label>
@@ -194,6 +201,7 @@ const EmpleadoLaboral = () => {
                 type="radio"
                 name="trabajando"
                 value="No"
+                checked={formData.trabajando === "No"}
                 onChange={handleChange}
               />
               <label className="form-check-label">No</label>
@@ -343,6 +351,7 @@ const EmpleadoLaboral = () => {
                 type="radio"
                 name="primas"
                 value="Si"
+                checked={formData.primas === "Si"}
                 onChange={handleChange}
               />
               <label className="form-check-label">Si</label>
@@ -353,6 +362,7 @@ const EmpleadoLaboral = () => {
                 type="radio"
                 name="primas"
                 value="No"
+                checked={formData.primas === "No"}
                 onChange={handleChange}
               />
               <label className="form-check-label">No</label>
@@ -417,6 +427,7 @@ const EmpleadoLaboral = () => {
                 type="radio"
                 name="contratista"
                 value="Si"
+                checked={formData.contratista === "Si"}
                 onChange={handleChange}
               />
               <label className="form-check-label">Si</label>
@@ -427,6 +438,7 @@ const EmpleadoLaboral = () => {
                 type="radio"
                 name="contratista"
                 value="No"
+                checked={formData.contratista === "No"}
                 onChange={handleChange}
               />
               <label className="form-check-label">No</label>
