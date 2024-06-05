@@ -7,9 +7,10 @@ const EmpresarioCard = () => {
   return (
     <Card style={{ width: "18rem", height: "100%" }}>
       <Card.Body>
-        <Card.Title>Empresas</Card.Title>
-        <Card.Text>
+        <Card.Title className="text-center mb-4">Empresas</Card.Title>
+        <Card.Text className="text-center">
           <strong>QUIERO UNA CONSULTA PRIORITARIA – PAGA</strong>
+          <br />
           <br />
           Se agenda de manera inmediata
           <br />
@@ -17,8 +18,9 @@ const EmpresarioCard = () => {
           <br />
           1 hora presencial: $200.000
           <br />
+          <br />
         </Card.Text>
-        <Button as={Link} to="/formulario-empresario" variant="primary">
+        <Button as={Link} to="/formulario-empresario" variant="primary w-100">
           Diligenciar formulario
         </Button>
       </Card.Body>
@@ -30,9 +32,10 @@ const TrabajadorCard = () => {
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Body>
-        <Card.Title>Trabajadores</Card.Title>
-        <Card.Text>
+        <Card.Title className="text-center mb-4">Trabajadores</Card.Title>
+        <Card.Text className="text-center">
           <strong>QUIERO UNA CONSULTA PRIORITARIA – PAGA</strong>
+          <br />
           <br />
           Se agenda de manera inmediata
           <br />
@@ -43,7 +46,7 @@ const TrabajadorCard = () => {
           1 hora presencial: $150.000
           <br />
         </Card.Text>
-        <Button as={Link} to="/formulario-trabajador" variant="primary">
+        <Button as={Link} to="/formulario-trabajador" variant="primary w-100">
           Diligenciar formulario
         </Button>
       </Card.Body>
