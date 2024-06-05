@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background-color: #f9f9f9;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    li strong {
+      display: inline-block;
+      width: 150px;
+      color: #007bff;
+    }
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h2>Detalles del formulario</h2>
+  <ul>
+    {{if tipoFormulario=="empresario"}}
+    <li><strong>Nombre completo:</strong> {{nombre}}</li>
+    <li><strong>Teléfono:</strong> {{telefono}}</li>
+    <li><strong>Correo electrónico:</strong> {{correo}}</li>
+    <li><strong>Empresa o negocio:</strong> {{empresa}}</li>
+    <li><strong>Cargo:</strong> {{cargo}}</li>
+    <li><strong>Ciudad:</strong> {{ciudad}}</li>
+    <li><strong>Número de trabajadores:</strong> {{trabajadores}}</li>
+    <li><strong>Tipo de servicios:</strong> {{servicios}}</li>
+    {{/if}}
+    {{if tipoFormulario=="empleado"}}
+    <li><strong>Nombre completo:</strong> {{nombre}}</li>
+    <li><strong>Teléfono:</strong> {{telefono}}</li>
+    <li><strong>Correo electrónico:</strong> {{correo}}</li>
+    <li><strong>Empresa o negocio:</strong> {{empresa}}</li>
+    <li><strong>Sigues trabajando en la empresa:</strong> {{siguesTrabajando}}</li>
+    <li><strong>En qué ciudad laboraste:</strong> {{ciudadLaboraste}}</li>
+    <li><strong>Qué cargo tenías:</strong> {{cargo}}</li>
+    <li><strong>Cual fue o es tu último salario:</strong> {{ultimoSalario}}</li>
+    <li><strong>Qué tipo de contrato tienes o tenías:</strong> {{tipoContrato}}</li>
+    <li><strong>Cuantos trabajadores tiene la empresa:</strong> {{cantidadTrabajadores}}</li>
+    <li><strong>La empresa es contratista de una empresa más grande:</strong> {{esContratista}}</li>
+    {{/if}}
+    {{if tipoFormulario=="empleadoAccidente"}}
+    <li><strong>Nombre completo:</strong> {{nombre}}</li>
+    <li><strong>Teléfono:</strong> {{telefono}}</li>
+    <li><strong>Correo electrónico:</strong> {{correo}}</li>
+    <li><strong>Empresa o negocio:</strong> {{empresa}}</li>
+    <li><strong>Sigues trabajando en la empresa:</strong> {{siguesTrabajando}}</li>
+    <li><strong>En qué ciudad laboraste:</strong> {{ciudadLaboraste}}</li>
+    <li><strong>Qué cargo tenías:</strong> {{cargo}}</li>
+    <li><strong>Cual fue o es tu último salario:</strong> {{ultimoSalario}}</li>
+    <li><strong>Qué tipo de contrato tienes o tenías:</strong> {{tipoContrato}}</li>
+    <li><strong>Cuantos trabajadores tiene la empresa:</strong> {{cantidadTrabajadores}}</li>
+    <li><strong>La empresa es contratista de una empresa más grande:</strong> {{esContratista}}</li>
+    <li><strong>Tuviste un accidente de trabajo o una enfermedad laboral:</strong> {{tipoAccidente}}</li>
+    <li><strong>El accidente/enfermedad causó la muerte del empleado:</strong> {{causaMuerte}}</li>
+    {{/if}}
+  </ul>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+{{ ACCIDENTE LABORAL }}
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        }
+        .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        border-radius: 4px;
+        }
+        ul {
+        list-style-type: none;
+        padding: 0;
+        }
+        li {
+        background-color: #f9f9f9;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 4px;
+        }
+        li strong {
+        display: inline-block;
+        width: 150px;
+        color: #007bff;
+        }
+        .footer {
+        margin-top: 20px;
+        text-align: center;
+        color: #777;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Detalles del formulario</h2>
+            <ul>
+                <li><strong>Nombre completo:</strong> {{nombre}}</li>
+                <li><strong>Teléfono:</strong> {{telefono}}</li>
+                <li><strong>Correo electrónico:</strong> {{correo}}</li>
+                <li><strong>Empresa o negocio:</strong> {{empresa}}</li>
+                <li><strong>Sigues trabajando en la empresa:</strong> {{siguesTrabajando}}</li>
+                <li><strong>En qué ciudad laboraste:</strong> {{ciudadLaboraste}}</li>
+                <li><strong>Qué cargo tenías:</strong> {{cargo}}</li>
+                <li><strong>Cual fue o es tu último salario:</strong> {{ultimoSalario}}</li>
+                <li><strong>Qué tipo de contrato tienes o tenías:</strong> {{tipoContrato}}</li>
+                <li><strong>Cuantos trabajadores tiene la empresa:</strong> {{cantidadTrabajadores}}</li>
+                <li><strong>La empresa es contratista de una empresa más grande:</strong> {{esContratista}}</li>
+                <li><strong>Es contratista de:</strong>{{empresaContratista}}</li>
+                <li><strong>Tuviste un accidente de trabajo o una enfermedad laboral:</strong> {{tipoAccidente}}</li>
+                <li><strong>El accidente/enfermedad causó la muerte del empleado:</strong> {{causaMuerte}}</li>
+            </ul>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+{{ EMPLEADO }}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+color: #333;
+line-height: 1.6;
+margin: 0;
+padding: 20px;
+}
+.container {
+max-width: 600px;
+margin: 0 auto;
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+background-color: #007bff;
+color: #fff;
+padding: 10px;
+border-radius: 4px;
+}
+ul {
+list-style-type: none;
+padding: 0;
+}
+li {
+background-color: #f9f9f9;
+margin: 10px 0;
+padding: 10px;
+border-radius: 4px;
+}
+li strong {
+display: inline-block;
+width: 150px;
+color: #007bff;
+}
+.footer {
+margin-top: 20px;
+text-align: center;
+color: #777;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Detalles del formulario</h2>
+    <ul>
+        <li><strong>Nombre completo:</strong> {{nombre}}</li>
+        <li><strong>Teléfono:</strong> {{telefono}}</li>
+        <li><strong>Correo electrónico:</strong> {{correo}}</li>
+        <li><strong>Empresa o negocio:</strong> {{empresa}}</li>
+        <li><strong>Sigues trabajando en la empresa:</strong> {{siguesTrabajando}}</li>
+        <li><strong>En qué ciudad laboraste:</strong> {{ciudadLaboraste}}</li>
+        <li><strong>Qué cargo tenías:</strong> {{cargo}}</li>
+        <li><strong>Cual fue o es tu último salario:</strong> {{ultimoSalario}}</li>
+        <li><strong>Qué tipo de contrato tienes o tenías:</strong> {{tipoContrato}}</li>
+        <li><strong>Cuantos trabajadores tiene la empresa:</strong> {{cantidadTrabajadores}}</li>
+        <li><strong>La empresa es contratista de una empresa más grande:</strong> {{esContratista}}</li>
+        <li><strong>Es contratista de:</strong>{{empresaContratista}}</li>
+    </ul>
+</div>
+</body>
+</html>
+
+
+{{ EMPRESARIO }}
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+color: #333;
+line-height: 1.6;
+margin: 0;
+padding: 20px;
+}
+.container {
+max-width: 600px;
+margin: 0 auto;
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+background-color: #007bff;
+color: #fff;
+padding: 10px;
+border-radius: 4px;
+}
+ul {
+list-style-type: none;
+padding: 0;
+}
+li {
+background-color: #f9f9f9;
+margin: 10px 0;
+padding: 10px;
+border-radius: 4px;
+}
+li strong {
+display: inline-block;
+width: 150px;
+color: #007bff;
+}
+.footer {
+margin-top: 20px;
+text-align: center;
+color: #777;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Detalles del formulario</h2>
+    <ul>
+        <li><strong>Nombre completo:</strong> {{nombre}}</li>
+        <li><strong>Teléfono:</strong> {{telefono}}</li>
+        <li><strong>Correo electrónico:</strong> {{correo}}</li>
+        <li><strong>Empresa o negocio:</strong> {{empresa}}</li>
+        <li><strong>Cargo:</strong> {{cargo}}</li>
+        <li><strong>Ciudad:</strong> {{ciudad}}</li>
+        <li><strong>Número de trabajadores:</strong> {{trabajadores}}</li>
+        <li><strong>Tipo de servicios:</strong> {{servicios}}</li>
+    </ul>
+</div>
+</body>
+</html>

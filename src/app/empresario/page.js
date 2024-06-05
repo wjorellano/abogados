@@ -48,7 +48,7 @@ const Empresario = () => {
     e.preventDefault();
     if (validate()) {
       const serviceID = "service_gz9iidr"; // Reemplaza con tu Service ID de EmailJS
-      const templateID = "template_u8o3quj"; // Reemplaza con tu Template ID de EmailJS
+      const templateID = "template_z0u2kkd"; // Reemplaza con tu Template ID de EmailJS
       const userID = "l_R0nu_kAXuE0IYdS"; // Reemplaza con tu User ID de EmailJS
 
       // Agrega el campo tipoFormulario al objeto formData
