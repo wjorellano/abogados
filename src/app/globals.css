@@ -1,5 +1,46 @@
-html, body{
-  width: 100%;
+/* styles.css */
+
+body, html {
   height: 100%;
-  text-decoration: none !important;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Fondo claro para resaltar la tarjeta */
+}
+
+#container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Ajuste el ancho máximo para una mejor visualización */
+  padding: 30px;
+  display: flex;
+  flex-direction: column; /* Asegura que el contenido sea en columna */
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Fondo claro para resaltar la tarjeta */
+}
+
+.shift-left #container {
+  justify-content: flex-start;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+p.text-center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#card-container {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }

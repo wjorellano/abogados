@@ -3,6 +3,7 @@
 import React from "react";
 import emailjs from "emailjs-com";
 import "bootstrap/dist/css/bootstrap.min.css";
+import '../page.module.css'
 
 const Empresario = () => {
   const [formData, setFormData] = React.useState({
@@ -87,135 +88,151 @@ const Empresario = () => {
       <p>Tiempo de respuesta 1 – 3 días hábiles</p>
 
       <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="form-label">Tu nombre completo</label>
-          <input
-            type="text"
-            className="form-control"
-            name="nombre"
-            value={formData.nombre}
-            onChange={handleChange}
-          />
-          {errors.nombre && <p className="text-danger">{errors.nombre}</p>}
+        <div className="row">
+          <div className="col-12 col-md-6">
+            <div className="mb-4">
+              <label className="form-label">Tu nombre completo</label>
+              <input
+                type="text"
+                className="form-control"
+                name="nombre"
+                value={formData.nombre}
+                onChange={handleChange}
+              />
+              {errors.nombre && <p className="text-danger">{errors.nombre}</p>}
+            </div>
         </div>
 
-        <div className="mb-3">
-          <label className="form-label">Tu teléfono</label>
-          <input
-            type="text"
-            className="form-control"
-            name="telefono"
-            value={formData.telefono}
-            onChange={handleChange}
-          />
-          {errors.telefono && <p className="text-danger">{errors.telefono}</p>}
+        <div className="col-12 col-md-6">
+          <div className="mb-3">
+            <label className="form-label">Tu teléfono</label>
+            <input
+              type="text"
+              className="form-control"
+              name="telefono"
+              value={formData.telefono}
+              onChange={handleChange}
+            />
+            {errors.telefono && <p className="text-danger">{errors.telefono}</p>}
+          </div>
         </div>
 
-        <div className="mb-3">
-          <label className="form-label">Tu correo electrónico</label>
-          <input
-            type="email"
-            className="form-control"
-            name="correo"
-            value={formData.correo}
-            onChange={handleChange}
-          />
-          {errors.correo && <p className="text-danger">{errors.correo}</p>}
+        <div className="col-12 col-md-6">
+          <div className="mb-3">
+            <label className="form-label">Tu correo electrónico</label>
+            <input
+              type="email"
+              className="form-control"
+              name="correo"
+              value={formData.correo}
+              onChange={handleChange}
+            />
+            {errors.correo && <p className="text-danger">{errors.correo}</p>}
+          </div>
+        </div>
+        
+        <div className="col-12 col-md-6">
+          <div className="mb-3">
+            <label className="form-label">Nombre de la empresa o negocio</label>
+            <input
+              type="text"
+              className="form-control"
+              name="empresa"
+              value={formData.empresa}
+              onChange={handleChange}
+            />
+            {errors.empresa && <p className="text-danger">{errors.empresa}</p>}
+          </div>
         </div>
 
-        <div className="mb-3">
-          <label className="form-label">Nombre de la empresa o negocio</label>
-          <input
-            type="text"
-            className="form-control"
-            name="empresa"
-            value={formData.empresa}
-            onChange={handleChange}
-          />
-          {errors.empresa && <p className="text-danger">{errors.empresa}</p>}
+        <div className="col-12 col-md-6">
+          <div className="mb-3">
+            <label className="form-label">Qué cargo tienes</label>
+            <input
+              type="text"
+              className="form-control"
+              name="cargo"
+              value={formData.cargo}
+              onChange={handleChange}
+            />
+            {errors.cargo && <p className="text-danger">{errors.cargo}</p>}
+          </div>
         </div>
-
-        <div className="mb-3">
-          <label className="form-label">Qué cargo tienes</label>
-          <input
-            type="text"
-            className="form-control"
-            name="cargo"
-            value={formData.cargo}
-            onChange={handleChange}
-          />
-          {errors.cargo && <p className="text-danger">{errors.cargo}</p>}
+        <div className="col-12 col-md-6">
+          <div className="mb-3">
+            <label className="form-label">
+              Ciudad de la sede principal de la empresa
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              name="ciudad"
+              value={formData.ciudad}
+              onChange={handleChange}
+            />
+            {errors.ciudad && <p className="text-danger">{errors.ciudad}</p>}
+          </div>
         </div>
-
-        <div className="mb-3">
-          <label className="form-label">
-            Ciudad de la sede principal de la empresa
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            name="ciudad"
-            value={formData.ciudad}
-            onChange={handleChange}
-          />
-          {errors.ciudad && <p className="text-danger">{errors.ciudad}</p>}
+        <div className="col-12 col-md-6">
+          <div className="mb-3">
+            <label className="form-label">
+              Cuantos trabajadores tiene la empresa
+            </label>
+            <select
+              className="form-select"
+              name="trabajadores"
+              value={formData.trabajadores}
+              onChange={handleChange}
+            >
+              <option value="">Seleccione una opción</option>
+              <option value="menos de 10">Menos de 10</option>
+              <option value="entre 10 y 30">Entre 10 y 30</option>
+              <option value="entre 30 y 100">Entre 30 y 100</option>
+              <option value="más de 100">Más de 100</option>
+            </select>
+            {errors.trabajadores && (
+              <p className="text-danger">{errors.trabajadores}</p>
+            )}
+          </div>
         </div>
-
-        <div className="mb-3">
-          <label className="form-label">
-            Cuantos trabajadores tiene la empresa
-          </label>
-          <select
-            className="form-select"
-            name="trabajadores"
-            value={formData.trabajadores}
-            onChange={handleChange}
-          >
-            <option value="">Seleccione una opción</option>
-            <option value="menos de 10">Menos de 10</option>
-            <option value="entre 10 y 30">Entre 10 y 30</option>
-            <option value="entre 30 y 100">Entre 30 y 100</option>
-            <option value="más de 100">Más de 100</option>
-          </select>
-          {errors.trabajadores && (
-            <p className="text-danger">{errors.trabajadores}</p>
-          )}
+        <div className="col-12 col-md-6">
+          <div className="mb-3">
+            <label className="form-label">Qué tipo de servicios necesitas</label>
+            <select
+              className="form-select"
+              name="servicios"
+              value={formData.servicios}
+              onChange={handleChange}
+            >
+              <option value="">Seleccione una opción</option>
+              <option value="demanda laboral">
+                Contestar una demanda laboral
+              </option>
+              <option value="derecho de petición">
+                Te presentaron un derecho de petición y/o tutela
+              </option>
+              <option value="contratos de trabajo">
+                Asesoría en contratos de trabajo
+              </option>
+              <option value="asesoría laboral general">
+                Asesoría laboral general
+              </option>
+              <option value="min trabajo">Proceso ante Min Trabajo</option>
+              <option value="SST">Sistema de Gestión de SST</option>
+              <option value="otra">Otra</option>
+            </select>
+            {errors.servicios && (
+              <p className="text-danger">{errors.servicios}</p>
+            )}
+          </div>
         </div>
-
-        <div className="mb-3">
-          <label className="form-label">Qué tipo de servicios necesitas</label>
-          <select
-            className="form-select"
-            name="servicios"
-            value={formData.servicios}
-            onChange={handleChange}
-          >
-            <option value="">Seleccione una opción</option>
-            <option value="demanda laboral">
-              Contestar una demanda laboral
-            </option>
-            <option value="derecho de petición">
-              Te presentaron un derecho de petición y/o tutela
-            </option>
-            <option value="contratos de trabajo">
-              Asesoría en contratos de trabajo
-            </option>
-            <option value="asesoría laboral general">
-              Asesoría laboral general
-            </option>
-            <option value="min trabajo">Proceso ante Min Trabajo</option>
-            <option value="SST">Sistema de Gestión de SST</option>
-            <option value="otra">Otra</option>
-          </select>
-          {errors.servicios && (
-            <p className="text-danger">{errors.servicios}</p>
-          )}
+        <div className="col-12 col-md-12">
+          {message && <p className="mt-3 alert alert-info">{message}</p>}
+          <button type="submit" className="btn btn-primary w-100 mb-5">
+            Enviar
+          </button>
         </div>
-
-        {message && <p className="mt-3 alert alert-info">{message}</p>}
-        <button type="submit" className="btn btn-primary w-100 mb-5">
-          Enviar
-        </button>
+        </div>
       </form>
     </div>
   );

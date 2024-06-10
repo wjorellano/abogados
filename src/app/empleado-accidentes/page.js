@@ -71,9 +71,9 @@ const EmpleadoAccidente = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      const serviceID = "service_mq9d1oh"; // Reemplaza con tu Service ID de EmailJS
-      const templateID = "template_6w7cx2d"; // Reemplaza con tu Template ID de EmailJS
-      const userID = "YkES8DCwht9V3A4RO"; // Reemplaza con tu User ID de EmailJS
+      const serviceID = "service_xmxobd8"; // Reemplaza con tu Service ID de EmailJS
+      const templateID = "template_t9qiwoh"; // Reemplaza con tu Template ID de EmailJS
+      const userID = "vq45iLGeVb9jmy3qM"; // Reemplaza con tu User ID de EmailJS
 
       // Agrega el campo tipoFormulario al objeto formData
       formData.tipoFormulario = "empleadoAccidente";
@@ -112,7 +112,7 @@ const EmpleadoAccidente = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div id="container" className="mt-5">
       <h1>SOY EMPLEADO</h1>
       <h2>TENGO UN CASO LABORAL</h2>
       <h2>ACCIDENTES DE TRABAJO – ENFERMEDADES LABORALES</h2>

@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import Button from "../../components/Button";
@@ -5,7 +7,7 @@ import logo from "../app/logo.jpeg";
 
 export default function Home() {
   return (
-    <div className="container-fluid h-100 mb-4">
+    <div className="container-fluid h-100 mb-4 mt-5"> {/* Contenedor de la tarjeta */}
       <div className="row">
         <div className="col">
           <div className={styles.logo}>
