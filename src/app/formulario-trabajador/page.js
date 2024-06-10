@@ -76,7 +76,7 @@ const FormularioTrabajador = () => {
   };
 
   return (
-    <div>
+    <div className="">
       {" "}
       {/* Contenedor de la tarjeta */}
       <h2>Formulario Persona</h2> {/* Título del formulario */}

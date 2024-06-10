@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import styles from "./page.module.css";
@@ -7,7 +7,9 @@ import logo from "../app/logo.jpeg";
 
 export default function Home() {
   return (
-    <div className="container-fluid h-100 mb-4 mt-5"> {/* Contenedor de la tarjeta */}
+    <div className="container-fluid h-100 mb-4 mt-5">
+      {" "}
+      {/* Contenedor de la tarjeta */}
       <div className="row">
         <div className="col">
           <div className={styles.logo}>
@@ -21,9 +23,9 @@ export default function Home() {
             <p>Abogados</p> */}
           </div>
         </div>
-        <div className="col">
+        <div className="col ">
           <div className={styles.info}>
-            <h1 className="text-center mt-5">
+            <h1 className="text-center mt-5 w-100">
               SI SELECCIONAMOS TU CASO LA CONSULTA ES GRATIS
             </h1>
             <p className="text-center">

@@ -112,7 +112,7 @@ const EmpleadoAccidente = () => {
   };
 
   return (
-    <div className="formulario">
+    <div className="formulario container">
       <h1 className="mt-5">SOY EMPLEADO</h1>
       <h2>TENGO UN CASO LABORAL</h2>
       <h2>ACCIDENTES DE TRABAJO – ENFERMEDADES LABORALES</h2>
