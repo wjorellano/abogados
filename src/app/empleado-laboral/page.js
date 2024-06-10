@@ -114,7 +114,7 @@ const EmpleadoLaboral = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container formulario2">
       <h1>SOY EMPLEADO</h1>
       <h2>TENGO UN CASO LABORAL</h2>
       <p>Si seleccionamos tu caso la consulta es gratis</p>
@@ -133,7 +133,9 @@ const EmpleadoLaboral = () => {
                 onChange={handleChange}
                 required
               />
-              {errors.nombre && <div className="text-danger">{errors.nombre}</div>}
+              {errors.nombre && (
+                <div className="text-danger">{errors.nombre}</div>
+              )}
             </div>
           </div>
 
@@ -165,14 +167,17 @@ const EmpleadoLaboral = () => {
                 onChange={handleChange}
                 required
               />
-              {errors.correo && <div className="text-danger">{errors.correo}</div>}
+              {errors.correo && (
+                <div className="text-danger">{errors.correo}</div>
+              )}
             </div>
           </div>
 
           <div className="mb-3 col-12 col-md-6">
             <div className="form-group mb-3">
               <label className="form-label">
-                Nombre de la empresa o negocio a quien quieres demandar tus derechos
+                Nombre de la empresa o negocio a quien quieres demandar tus
+                derechos
               </label>
               <input
                 type="text"
@@ -234,7 +239,9 @@ const EmpleadoLaboral = () => {
                 onChange={handleChange}
                 required
               />
-              {errors.ciudad && <div className="text-danger">{errors.ciudad}</div>}
+              {errors.ciudad && (
+                <div className="text-danger">{errors.ciudad}</div>
+              )}
             </div>
           </div>
 
@@ -249,7 +256,9 @@ const EmpleadoLaboral = () => {
                 onChange={handleChange}
                 required
               />
-              {errors.cargo && <div className="text-danger">{errors.cargo}</div>}
+              {errors.cargo && (
+                <div className="text-danger">{errors.cargo}</div>
+              )}
             </div>
           </div>
 
@@ -264,9 +273,15 @@ const EmpleadoLaboral = () => {
                 required
               >
                 <option value="">Seleccione una opción</option>
-                <option value="Entre 1 y 2 millones">Entre 1 y 2 millones</option>
-                <option value="Entre 2 y 4 millones">Entre 2 y 4 millones</option>
-                <option value="Entre 4 y 10 millones">Entre 4 y 10 millones</option>
+                <option value="Entre 1 y 2 millones">
+                  Entre 1 y 2 millones
+                </option>
+                <option value="Entre 2 y 4 millones">
+                  Entre 2 y 4 millones
+                </option>
+                <option value="Entre 4 y 10 millones">
+                  Entre 4 y 10 millones
+                </option>
                 <option value="Más de 10 millones">Más de 10 millones</option>
               </select>
               {errors.salario && (
@@ -277,7 +292,9 @@ const EmpleadoLaboral = () => {
 
           <div className="mb-3 col-12 col-md-6">
             <div className="form-group mb-3">
-              <label className="form-label">Tipo de contrato con la empresa</label>
+              <label className="form-label">
+                Tipo de contrato con la empresa
+              </label>
               <select
                 className="form-select"
                 name="contrato"
@@ -310,7 +327,9 @@ const EmpleadoLaboral = () => {
 
           <div className="mb-3 col-12 col-md-6">
             <div className="form-group mb-3">
-              <label className="form-label">Fecha de ingreso a la empresa</label>
+              <label className="form-label">
+                Fecha de ingreso a la empresa
+              </label>
               <input
                 type="date"
                 className="form-control"
@@ -337,7 +356,9 @@ const EmpleadoLaboral = () => {
                 value={formData.retiro}
                 onChange={handleChange}
               />
-              {errors.retiro && <div className="text-danger">{errors.retiro}</div>}
+              {errors.retiro && (
+                <div className="text-danger">{errors.retiro}</div>
+              )}
             </div>
           </div>
 
@@ -394,7 +415,9 @@ const EmpleadoLaboral = () => {
                   <label className="form-check-label">No</label>
                 </div>
               </div>
-              {errors.primas && <div className="text-danger">{errors.primas}</div>}
+              {errors.primas && (
+                <div className="text-danger">{errors.primas}</div>
+              )}
             </div>
           </div>
 
@@ -418,7 +441,9 @@ const EmpleadoLaboral = () => {
                   Varias o todas las anteriores
                 </option>
               </select>
-              {errors.deuda && <div className="text-danger">{errors.deuda}</div>}
+              {errors.deuda && (
+                <div className="text-danger">{errors.deuda}</div>
+              )}
             </div>
           </div>
 

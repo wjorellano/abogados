@@ -8,18 +8,17 @@ import "../globals.css"; // Importa el archivo CSS
 
 // Definición del componente funcional FormularioEmpresario
 const FormularioEmpresario = () => {
-
   // Definición del estado inicial del formulario
   const [formData, setFormData] = React.useState({
     nombre: "", // Campo para el nombre del usuario
     telefono: "", // Campo para el teléfono del usuario
     correo: "", // Campo para el correo del usuario
-    empresa: "" 
+    empresa: "",
   });
 
   // Definición del estado para los errores del formulario
   const [errors, setErrors] = React.useState({});
-  
+
   // Definición del estado para los mensajes de éxito o error al enviar el formulario
   const [message, setMessage] = React.useState("");
 
@@ -33,9 +32,13 @@ const FormularioEmpresario = () => {
     let tempErrors = {};
     tempErrors.nombre = formData.nombre ? "" : "Este campo es requerido."; // Validación del nombre
     tempErrors.telefono =
-      formData.telefono.length === 10 ? "" : "El número de teléfono debe tener 10 dígitos."; // Validación del teléfono
-    tempErrors.correo = /\S+@\S+\.\S+/.test(formData.correo) ? "" : "Correo electrónico no válido."; // Validación del correo
-    tempErrors.empresa = formData.empresa ? "" : "Este campo es requerido."
+      formData.telefono.length === 10
+        ? ""
+        : "El número de teléfono debe tener 10 dígitos."; // Validación del teléfono
+    tempErrors.correo = /\S+@\S+\.\S+/.test(formData.correo)
+      ? ""
+      : "Correo electrónico no válido."; // Validación del correo
+    tempErrors.empresa = formData.empresa ? "" : "Este campo es requerido.";
     setErrors(tempErrors);
     return Object.values(tempErrors).every((x) => x === ""); // Verifica si todos los campos son válidos
   };
@@ -43,7 +46,8 @@ const FormularioEmpresario = () => {
   // Función para manejar el envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault(); // Previene el comportamiento por defecto del formulario
-    if (validate()) { // Si la validación es exitosa
+    if (validate()) {
+      // Si la validación es exitosa
       const serviceID = "service_xmxobd8"; // Reemplaza con tu Service ID de EmailJS
       const templateID = "template_8gjeyfp"; // Reemplaza con tu Template ID de EmailJS
       const userID = "vq45iLGeVb9jmy3qM"; // Reemplaza con tu User ID de EmailJS
@@ -61,7 +65,7 @@ const FormularioEmpresario = () => {
             nombre: "",
             telefono: "",
             correo: "",
-            empresa: ""
+            empresa: "",
           });
         },
         (error) => {
@@ -75,10 +79,13 @@ const FormularioEmpresario = () => {
   };
 
   return (
-    <div id="card-container"> {/* Contenedor de la tarjeta */}
+    <div className="w-100">
+      {/* Contenedor de la tarjeta */}
       <div id="card-background"></div> {/* Fondo de la tarjeta */}
-      <h2>Formulario Empresa</h2> {/* Título del formulario */}
-      <form onSubmit={handleSubmit}> {/* Manejador de envío del formulario */}
+      <h4>Formulario Empresa</h4> {/* Título del formulario */}
+      <form onSubmit={handleSubmit}>
+        {" "}
+        {/* Manejador de envío del formulario */}
         <div className="mb-3">
           <label className="form-label">Nombre</label>
           <input
@@ -87,9 +94,10 @@ const FormularioEmpresario = () => {
             name="nombre"
             value={formData.nombre}
             onChange={handleChange}
-            required
+            // required
           />
-          {errors.nombre && <div className="text-danger">{errors.nombre}</div>} {/* Muestra el error si existe */}
+          {errors.nombre && <div className="text-danger">{errors.nombre}</div>}{" "}
+          {/* Muestra el error si existe */}
         </div>
         <div className="mb-3">
           <label className="form-label">Celular</label>
@@ -99,9 +107,12 @@ const FormularioEmpresario = () => {
             name="telefono"
             value={formData.telefono}
             onChange={handleChange}
-            required
+            // required
           />
-          {errors.telefono && <div className="text-danger">{errors.telefono}</div>} {/* Muestra el error si existe */}
+          {errors.telefono && (
+            <div className="text-danger">{errors.telefono}</div>
+          )}{" "}
+          {/* Muestra el error si existe */}
         </div>
         <div className="mb-3">
           <label className="form-label">Correo electrónico</label>
@@ -111,9 +122,10 @@ const FormularioEmpresario = () => {
             name="correo"
             value={formData.correo}
             onChange={handleChange}
-            required
+            // required
           />
-          {errors.correo && <div className="text-danger">{errors.correo}</div>} {/* Muestra el error si existe */}
+          {errors.correo && <div className="text-danger">{errors.correo}</div>}{" "}
+          {/* Muestra el error si existe */}
         </div>
         <div className="mb-3">
           <label className="form-label">Empresa</label>
@@ -123,13 +135,20 @@ const FormularioEmpresario = () => {
             name="empresa"
             value={formData.empresa}
             onChange={handleChange}
-            required
+            // required
           />
-          {errors.empresa && <div className="text-danger">{errors.empresa}</div>} {/* Muestra el error si existe */}
+          {errors.empresa && (
+            <div className="text-danger">{errors.empresa}</div>
+          )}{" "}
+          {/* Muestra el error si existe */}
         </div>
-        <button type="submit" className="btn btn-primary">Enviar</button> {/* Botón de envío */}
+        <button type="submit" className="btn btn-primary w-100">
+          Enviar
+        </button>
+        {/* Botón de envío */}
       </form>
-      {message && <div className="mt-3 alert alert-info">{message}</div>} {/* Muestra el mensaje de éxito o error */}
+      {message && <div className="mt-3 alert alert-info">{message}</div>}{" "}
+      {/* Muestra el mensaje de éxito o error */}
     </div>
   );
 };

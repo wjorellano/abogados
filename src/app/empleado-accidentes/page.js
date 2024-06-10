@@ -112,8 +112,8 @@ const EmpleadoAccidente = () => {
   };
 
   return (
-    <div id="container" className="mt-5">
-      <h1>SOY EMPLEADO</h1>
+    <div className="formulario">
+      <h1 className="mt-5">SOY EMPLEADO</h1>
       <h2>TENGO UN CASO LABORAL</h2>
       <h2>ACCIDENTES DE TRABAJO – ENFERMEDADES LABORALES</h2>
       <p>Si tomamos tu caso la consulta es gratis</p>
