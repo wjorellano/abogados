@@ -94,11 +94,11 @@
   /* margin-left: 70px; */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
 
   .button {
     /* background: #666; */
-    margin-left: 35px;
+    /* margin-left: 35px; */
   }
 
   .title {
