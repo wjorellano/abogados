@@ -7,8 +7,7 @@ import logo from "../app/logo.jpeg";
 
 export default function Home() {
   return (
-    <div className=" h-100 mt-3">
-      {" "}
+    <div className="container-fluid mt-3">
       {/* Contenedor de la tarjeta */}
       <div className="row">
         <div className="col">
@@ -24,7 +23,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col mx-auto">
-          <div className="container mx-auto">
+          <div className="mx-auto">
             <h1 className={styles.title}>
               SI SELECCIONAMOS TU CASO LA CONSULTA ES GRATIS
             </h1>
