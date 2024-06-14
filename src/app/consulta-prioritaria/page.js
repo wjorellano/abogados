@@ -91,6 +91,7 @@
 import React, { useState } from "react";
 import FormularioEmpresario from "../formulario-empresario/page";
 import FormularioTrabajador from "../formulario-trabajador/page";
+import Link from "next/link";
 // import "../globals.css";
 
 const ConsultaPrioritariaPage = () => {
@@ -103,12 +104,12 @@ const ConsultaPrioritariaPage = () => {
   console.log(activeForm);
 
   return (
-    <div className="">
-      <div className={activeForm ? "shift-left" : " wrapper mt-5"}>
+    <div className="container">
+      <div className={activeForm ? "shift-left" : " wrapper"}>
         {activeForm === false ? (
           <>
-            <div className=" row w-100 mx-auto mt-5">
-              <div className="row justify-content-center mt-5 pb-5 m-auto">
+            <div className=" row w-100 mx-auto">
+              <div className="row justify-content-center mt-2 pb-5 m-auto">
                 <h1 className="text-center">Consulta Prioritaria</h1>
               </div>
               <div className="col-12 col-sm-12 col-md-6">
@@ -129,12 +130,12 @@ const ConsultaPrioritariaPage = () => {
                       <br />
                       <br />
                     </p>
-                    <button
-                      onClick={() => handleFormClick("empresario")}
+                    <a
+                      href="https://wa.me/message/UY2EX4PNZT2IN1"
                       className="btn btn-primary w-100"
                     >
-                      Diligenciar formulario
-                    </button>
+                      Ir a WhatsApp
+                    </a>
                   </div>
                 </div>
               </div>
@@ -157,12 +158,13 @@ const ConsultaPrioritariaPage = () => {
                       1 hora presencial: $150.000
                       <br />
                     </p>
-                    <button
-                      onClick={() => handleFormClick("trabajador")}
+                    <a
+                      // colocar un mensaje para whatsapp
+                      href="https://wa.me/message/UY2EX4PNZT2IN1?text=Hola quiero una consulta prioritaria"
                       className="btn btn-primary w-100"
                     >
-                      Diligenciar formulario
-                    </button>
+                      Ir a WhatsApp
+                    </a>
                   </div>
                 </div>
               </div>

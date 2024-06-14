@@ -114,7 +114,7 @@ const EmpleadoLaboral = () => {
   };
 
   return (
-    <div className="formulario3">
+    <div className="formulario3 container mt-5">
       <h1>SOY EMPLEADO</h1>
       <h2>TENGO UN CASO LABORAL</h2>
       <p>Si seleccionamos tu caso la consulta es gratis</p>

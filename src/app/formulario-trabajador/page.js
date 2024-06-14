@@ -5,6 +5,7 @@ import React from "react";
 import emailjs from "emailjs-com"; // Biblioteca para enviar correos con EmailJS
 import "bootstrap/dist/css/bootstrap.min.css"; // Biblioteca CSS para estilos de Bootstrap
 import "../globals.css"; // Importa el archivo CSS
+import Link from "next/link";
 
 // Definición del componente funcional FormularioTrabajador
 const FormularioTrabajador = () => {
@@ -120,9 +121,9 @@ const FormularioTrabajador = () => {
           {errors.correo && <div className="text-danger">{errors.correo}</div>}{" "}
           {/* Muestra el error si existe */}
         </div>
-        <button type="submit" className="btn btn-primary w-100">
+        <Link type="submit" className="btn btn-primary w-100">
           Enviar
-        </button>{" "}
+        </Link>{" "}
         {/* Botón de envío */}
       </form>
       {message && <div className="mt-3 alert alert-info">{message}</div>}{" "}
