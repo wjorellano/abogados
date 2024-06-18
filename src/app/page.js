@@ -17,6 +17,7 @@ export default function Home() {
               alt="Mendoza & Gutiérrez"
               width="500"
               height="500"
+              className="img"
             />
             {/* <h2>Mendoza & Gutiérrez</h2>
             <p>Abogados</p> */}
@@ -27,7 +28,7 @@ export default function Home() {
             <h1 className={styles.title}>
               SI SELECCIONAMOS TU CASO LA CONSULTA ES GRATIS
             </h1>
-            <p className={styles.subtitle}>
+            <p className="text-center">
               TIEMPO DE RESPUESTA 1 – 3 DÍAS HÁBILES
             </p>
             <div className={styles.wrapperBtn}>

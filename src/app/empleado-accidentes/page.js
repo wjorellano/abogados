@@ -119,7 +119,7 @@ const EmpleadoAccidente = () => {
       <p>Si tomamos tu caso la consulta es gratis</p>
       <p>Tiempo de respuesta 1 – 3 días hábiles</p>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="container">
         <div className="form-group mb-3">
           <label>Tu nombre completo</label>
           <input

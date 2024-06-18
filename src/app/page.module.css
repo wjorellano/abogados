@@ -80,17 +80,23 @@
   /* text-decoration: none !important; */
 }
 
+.wrapperBtn{
+  /* border: 1px solid #f00; */
+  margin: auto;
+  justify-self: auto;
+}
+
 .title {
 
   /* border: 1px solid #f00; */
-  text-align: center;
+  /* text-align: center; */
   /* margin-left: 70px; */
 }
 
 .subtitle {
 
   /* border: 1px solid #f00; */
-  text-align: center;
+  /* text-align: center; */
   /* margin-left: 70px; */
 }
 
@@ -104,24 +110,28 @@
   .title {
     font-size: 24px;
     text-align: center;
-    margin-left: 70px;
+    /* margin-left: 70px; */
   }
 
   .subtitle {
     font-size: 16px;
     margin-top: 20px;
     text-align: center;
-    margin-left: 70px;
+    /* margin-left: 70px; */
   }
 
   .logo {
     margin-top: -60px;
-
+    width: 80%;
   }
 
-    .navbar {
-      display: none;
-    }
+  .img{
+    width: 100%;
+    border: 1px solid #f00;
+  }
+  .navbar {
+    display: none;
+  }
 
 }
 
