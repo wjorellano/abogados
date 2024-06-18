@@ -475,7 +475,7 @@ const EmpleadoLaboral = () => {
           <div className="mb-3 col-12 col-md-6">
             <div className="form-group mb-3">
               <label className="form-label">
-                ¿La empresa es contratista de una empresa más grande?
+                ¿La empresa es contratante de una empresa más grande?
               </label>
               <div>
                 <div className="form-check form-check-inline">
@@ -511,7 +511,7 @@ const EmpleadoLaboral = () => {
             <div className="mb-3 col-12 col-md-6">
               <div className="form-group mb-3">
                 <label className="form-label">
-                  Nombre de la empresa contratista
+                  Nombre de la empresa contratante
                 </label>
                 <input
                   type="text"

@@ -326,7 +326,7 @@ const EmpleadoAccidente = () => {
         </div>
 
         <div className="form-group mb-3">
-          <label>La empresa es contratista de una empresa más grande</label>
+          <label>La empresa es contratante de una empresa más grande</label>
           <select
             className="form-control"
             name="contratista"
@@ -345,7 +345,7 @@ const EmpleadoAccidente = () => {
         {formData.contratista === "si" && (
           <div className="mb-3">
             <label className="form-label">
-              Nombre de la empresa contratista
+              Nombre de la empresa contratante
             </label>
             <input
               type="text"
