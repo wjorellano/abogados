@@ -91,7 +91,7 @@ const Empresario = () => {
         <div className="row container">
           <div className="col-12 col-md-6">
             <div className="mb-4">
-              <label className="form-label">Tu nombre completo</label>
+              <label className="form-label">Tu nombre completo*</label>
               <input
                 type="text"
                 className="form-control"
@@ -105,7 +105,7 @@ const Empresario = () => {
 
           <div className="col-12 col-md-6">
             <div className="mb-3">
-              <label className="form-label">Tu teléfono</label>
+              <label className="form-label">Tu teléfono*</label>
               <input
                 type="text"
                 className="form-control"
@@ -121,7 +121,7 @@ const Empresario = () => {
 
           <div className="col-12 col-md-6">
             <div className="mb-3">
-              <label className="form-label">Tu correo electrónico</label>
+              <label className="form-label">Tu correo electrónico*</label>
               <input
                 type="email"
                 className="form-control"
@@ -136,7 +136,7 @@ const Empresario = () => {
           <div className="col-12 col-md-6">
             <div className="mb-3">
               <label className="form-label">
-                Nombre de la empresa o negocio
+                Nombre de la empresa o negocio*
               </label>
               <input
                 type="text"
@@ -153,7 +153,7 @@ const Empresario = () => {
 
           <div className="col-12 col-md-6">
             <div className="mb-3">
-              <label className="form-label">Qué cargo tienes</label>
+              <label className="form-label">Qué cargo tienes*</label>
               <input
                 type="text"
                 className="form-control"
@@ -167,7 +167,7 @@ const Empresario = () => {
           <div className="col-12 col-md-6">
             <div className="mb-3">
               <label className="form-label">
-                Ciudad de la sede principal de la empresa
+                Ciudad de la sede principal de la empresa*
               </label>
               <input
                 type="text"
@@ -182,7 +182,7 @@ const Empresario = () => {
           <div className="col-12 col-md-6">
             <div className="mb-3">
               <label className="form-label">
-                Cuantos trabajadores tiene la empresa
+                Cuantos trabajadores tiene la empresa*
               </label>
               <select
                 className="form-select"
@@ -204,7 +204,7 @@ const Empresario = () => {
           <div className="col-12 col-md-6">
             <div className="mb-3">
               <label className="form-label">
-                Qué tipo de servicios necesitas
+                Qué tipo de servicios necesitas*
               </label>
               <select
                 className="form-select"

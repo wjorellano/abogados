@@ -124,7 +124,7 @@ const EmpleadoLaboral = () => {
         <div className="row">
           <div className="mb-3 col-12 col-md-6">
             <div className="form-group mb-3">
-              <label className="form-label">Tu nombre completo</label>
+              <label className="form-label">Tu nombre completo*</label>
               <input
                 type="text"
                 className="form-control"
@@ -141,7 +141,7 @@ const EmpleadoLaboral = () => {
 
           <div className="mb-3 col-12 col-md-6">
             <div className="form-group mb-3">
-              <label className="form-label">Tu teléfono</label>
+              <label className="form-label">Tu teléfono*</label>
               <input
                 type="text"
                 className="form-control"
@@ -158,7 +158,7 @@ const EmpleadoLaboral = () => {
 
           <div className="mb-3 col-12 col-md-6">
             <div className="form-group mb-3">
-              <label className="form-label">Tu correo electrónico</label>
+              <label className="form-label">Tu correo electrónico*</label>
               <input
                 type="email"
                 className="form-control"
@@ -178,7 +178,7 @@ const EmpleadoLaboral = () => {
               <label className="form-label">
                 Nombre de la empresa o negocio a quien quieres demandar tus
                 derechos
-              </label>
+              *</label>
               <input
                 type="text"
                 className="form-control"
@@ -197,7 +197,7 @@ const EmpleadoLaboral = () => {
             <div className="form-group mb-3">
               <label className="form-label">
                 ¿Sigues trabajando en la empresa?
-              </label>
+              *</label>
               <div>
                 <div className="form-check form-check-inline">
                   <input
@@ -230,7 +230,7 @@ const EmpleadoLaboral = () => {
 
           <div className="mb-3 col-12 col-md-6">
             <div className="form-group mb-3">
-              <label className="form-label">En qué ciudad laboraste</label>
+              <label className="form-label">En qué ciudad laboraste*</label>
               <input
                 type="text"
                 className="form-control"
@@ -247,7 +247,7 @@ const EmpleadoLaboral = () => {
 
           <div className="mb-3 col-12 col-md-6">
             <div className="form-group mb-3">
-              <label className="form-label">Último cargo en la empresa</label>
+              <label className="form-label">Último cargo en la empresa*</label>
               <input
                 type="text"
                 className="form-control"
@@ -264,7 +264,7 @@ const EmpleadoLaboral = () => {
 
           <div className="mb-3 col-12 col-md-6">
             <div className="form-group mb-3">
-              <label className="form-label">Último salario</label>
+              <label className="form-label">Último salario*</label>
               <select
                 className="form-select"
                 name="salario"
@@ -294,7 +294,7 @@ const EmpleadoLaboral = () => {
             <div className="form-group mb-3">
               <label className="form-label">
                 Tipo de contrato con la empresa
-              </label>
+              *</label>
               <select
                 className="form-select"
                 name="contrato"
@@ -329,7 +329,7 @@ const EmpleadoLaboral = () => {
             <div className="form-group mb-3">
               <label className="form-label">
                 Fecha de ingreso a la empresa
-              </label>
+              *</label>
               <input
                 type="date"
                 className="form-control"
@@ -348,7 +348,7 @@ const EmpleadoLaboral = () => {
             <div className="form-group mb-3">
               <label className="form-label">
                 Fecha de retiro de la empresa. Si sigues activo no diligenciar
-              </label>
+              *</label>
               <input
                 type="date"
                 className="form-control"
@@ -366,7 +366,7 @@ const EmpleadoLaboral = () => {
             <div className="form-group mb-3">
               <label className="form-label">
                 ¿Cuántos trabajadores tiene la empresa?
-              </label>
+              *</label>
               <select
                 className="form-select"
                 name="trabajadores"
@@ -390,7 +390,7 @@ const EmpleadoLaboral = () => {
             <div className="form-group mb-3">
               <label className="form-label">
                 ¿Te pagaban primas, cesantías, vacaciones?
-              </label>
+              *</label>
               <div>
                 <div className="form-check form-check-inline">
                   <input
@@ -423,7 +423,7 @@ const EmpleadoLaboral = () => {
 
           <div className="mb-3 col-12 col-md-6">
             <div className="form-group mb-3">
-              <label className="form-label">¿Te quedaron debiendo?</label>
+              <label className="form-label">¿Te quedaron debiendo?*</label>
               <select
                 className="form-select"
                 name="deuda"
@@ -451,7 +451,7 @@ const EmpleadoLaboral = () => {
             <div className="form-group mb-3">
               <label className="form-label">
                 ¿Tienes alguno de los siguientes documentos como pruebas?
-              </label>
+              *</label>
               <select
                 className="form-select"
                 name="pruebas"
@@ -476,7 +476,7 @@ const EmpleadoLaboral = () => {
             <div className="form-group mb-3">
               <label className="form-label">
                 ¿La empresa es contratante de una empresa más grande?
-              </label>
+              *</label>
               <div>
                 <div className="form-check form-check-inline">
                   <input
@@ -487,7 +487,7 @@ const EmpleadoLaboral = () => {
                     checked={formData.contratista === "Si"}
                     onChange={handleChange}
                   />
-                  <label className="form-check-label">Si</label>
+                  <label className="form-check-label">Si*</label>
                 </div>
                 <div className="form-check form-check-inline">
                   <input
@@ -498,7 +498,7 @@ const EmpleadoLaboral = () => {
                     checked={formData.contratista === "No"}
                     onChange={handleChange}
                   />
-                  <label className="form-check-label">No</label>
+                  <label className="form-check-label">No*</label>
                 </div>
               </div>
               {errors.contratista && (
@@ -512,7 +512,7 @@ const EmpleadoLaboral = () => {
               <div className="form-group mb-3">
                 <label className="form-label">
                   Nombre de la empresa contratante
-                </label>
+                *</label>
                 <input
                   type="text"
                   className="form-control"
